@@ -68,7 +68,7 @@ The seeder is a Node CLI. It logs in through `/auth/login`, creates demo librari
 
 ## Security
 
-- Bearer token required except `POST /auth/login` and `GET /health`.
+- Bearer token required except `POST /api/v1/auth/login` and `GET /api/v1/health`.
 - Token contains `sub` and `role`, expires in 28,800 seconds.
 - No personal data in token.
 - Passwords are hashed through a port and never returned.
