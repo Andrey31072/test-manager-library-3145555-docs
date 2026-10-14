@@ -18,6 +18,7 @@ It must be read before changing code in the five implementation repositories.
 - `api-contract.md`: implementation checklist for the required HTTP contract.
 - `data-model.md`: PostgreSQL schema checklist and migration rules.
 - `traceability.md`: task-to-repository evidence matrix used to keep commits small and aligned.
+- `validation-report.md`: source comparison, authority decisions, corrected traps, and the implementation gate.
 
 ## Non-Negotiable Scope Boundaries
 

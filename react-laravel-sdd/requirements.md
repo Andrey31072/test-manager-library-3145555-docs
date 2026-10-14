@@ -76,7 +76,6 @@ Fines, payments, reservations, renewals, email/SMS, bulk import, multi-branch le
 | Laravel normally adds `created_at` and `updated_at` | Disable model timestamps and do not create audit columns. |
 | `user` is a reserved SQL word | Create `library."user"` and configure Laravel table names explicitly. |
 | `GET /books/{id}/cover` is mentioned in prose but missing from the endpoint table | Implement it because cover rendering depends on it and the contract text explicitly names it. |
-| ADR-002 mentions a version witness, but `data-model.md` lists no version column | Do not add a version column without changing the data model. Use atomic conditional updates plus the `ck_book_available_range` database check for concurrency. |
 | T-18 asks to add checks marked pending | This implementation may include `ck_book_total_positive` and `ck_user_role` directly in the initial Laravel migration and document that evidence. |
 | Error messages must be Spanish while documentation is now English | Keep docs in English; API messages returned to users remain Spanish. |
 | Infra must not own DDL | No `CREATE TABLE` or schema seed SQL in infra. DDL lives in the Laravel migration. |
